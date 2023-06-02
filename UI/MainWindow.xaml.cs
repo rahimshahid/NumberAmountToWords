@@ -49,7 +49,7 @@ namespace UI
 
                 if (String.IsNullOrEmpty(amount)) 
                 {
-                    MessageBox.Show($"Please specify an amount", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    txtResult.Text = $"Error occurred: Please specify an amount";
                     return;
                 }
 
@@ -63,7 +63,7 @@ namespace UI
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                txtResult.Text = $"Error occurred: {ex.Message}";
             }
             finally 
             {
